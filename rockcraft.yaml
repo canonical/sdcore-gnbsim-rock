@@ -17,3 +17,5 @@ parts:
       - go/1.18/stable
     organize:
       bin/cmd: bin/gnbsim
+    stage-packages:
+      - iproute2
