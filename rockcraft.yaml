@@ -1,5 +1,6 @@
 name: sdcore-gnbsim
-base: ubuntu:22.04
+base: bare
+build-base: ubuntu:22.04
 version: '1.3'
 summary: SD-Core gnbsim
 description: SD-Core gnbsim
@@ -19,3 +20,4 @@ parts:
       bin/cmd: bin/gnbsim
     stage-packages:
       - iproute2
+      - libc6
