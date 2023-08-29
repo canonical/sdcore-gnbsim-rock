@@ -11,9 +11,9 @@ platforms:
 parts:
   gnbsim:
     plugin: go
-    source: https://github.com/omec-project/gnbsim.git
+    source: https://github.com/Gmerold/gnbsim.git
     source-type: git
-    source-commit: 1caccfcaac9b718d987aff378212614e4fe634fb
+    source-commit: 846b8504395ee5dfeab036306e97bbac747af849
     build-snaps:
       - go/1.18/stable
     organize:
