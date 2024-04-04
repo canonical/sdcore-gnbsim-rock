@@ -1,7 +1,7 @@
 name: sdcore-gnbsim
 base: bare
 build-base: ubuntu@22.04
-version: '1.3'
+version: '1.4.0'
 summary: SD-Core gnbsim
 description: SD-Core gnbsim
 license: Apache-2.0
@@ -14,7 +14,7 @@ parts:
     plugin: go
     source: https://github.com/omec-project/gnbsim.git
     source-type: git
-    source-commit: 7da5c27f6bf83dccbee4eb2dbc5f6c26439c6099
+    source-tag: v1.4.0
     build-snaps:
       - go/1.22/stable
     organize:
