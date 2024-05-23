@@ -1,4 +1,4 @@
-# SD-Core gnbsim ROCK
+# SD-Core gnbsim rock
 
 Container image for SD-Core gnbsim.
 
