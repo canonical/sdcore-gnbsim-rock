@@ -22,4 +22,4 @@ parts:
     stage-packages:
       - iproute2
       - libc6
-      - base-files_lib
+      - base-files
