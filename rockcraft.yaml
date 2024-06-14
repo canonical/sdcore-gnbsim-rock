@@ -14,7 +14,7 @@ parts:
     plugin: go
     source: https://github.com/omec-project/gnbsim.git
     source-type: git
-    source-tag: v1.4.3
+    source-tag: v${CRAFT_PROJECT_VERSION}
     build-snaps:
       - go/1.22/stable
     organize:
@@ -23,3 +23,12 @@ parts:
       - iproute2
       - libc6
       - base-files
+  version:
+    plugin: nil
+    override-build: |
+      mkdir -p ${CRAFT_PART_INSTALL}/etc/
+      echo ${CRAFT_PROJECT_VERSION} > ${CRAFT_PART_INSTALL}/etc/workload-version
+    organize:
+      "*": etc/
+    stage:
+      - etc/
