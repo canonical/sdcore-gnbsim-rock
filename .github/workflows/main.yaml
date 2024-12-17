@@ -3,21 +3,23 @@ name: Release v1.5.0 CI
 on:
   pull_request:
     branches:
-      - main
+      - v1.5.0
   push:
+      branches:
+      - v1.5.0
   schedule:
     - cron: '0 0 * * 0'
 
 jobs:
 
   build-rock:
-    uses: canonical/sdcore-github-workflows/.github/workflows/build-rock.yaml@v2.3.0
+    uses: canonical/sdcore-github-workflows/.github/workflows/build-rock.yaml@v2.3.1
 
   scan-rock:
     needs: build-rock
-    uses: canonical/sdcore-github-workflows/.github/workflows/scan-rock.yaml@v2.3.0
+    uses: canonical/sdcore-github-workflows/.github/workflows/scan-rock.yaml@v2.3.1
 
   publish-rock:
     if: github.ref_name == 'v1.5.0'
     needs: scan-rock
-    uses: canonical/sdcore-github-workflows/.github/workflows/publish-rock.yaml@v2.3.0
+    uses: canonical/sdcore-github-workflows/.github/workflows/publish-rock.yaml@v2.3.1
